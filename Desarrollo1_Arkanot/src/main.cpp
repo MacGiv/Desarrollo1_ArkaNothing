@@ -9,14 +9,14 @@ int main(int args, char* argv[])
     int paddleWidth = 150;
 
     // set up our window and a few resources we need
-    slWindow(screenWidth, screenHeight, "Simple SIGIL Example", false);
+    slWindow(screenWidth, screenHeight, "ArkaNOT", false);
 
 
 
 
     while (!slShouldClose() && !slGetKey(SL_KEY_ESCAPE))
     {
-        // background glow
+        // Foreground color
         slSetForeColor(1.0, 1.0, 1.0, 1.0);
 
 

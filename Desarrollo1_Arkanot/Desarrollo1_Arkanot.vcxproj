@@ -19,11 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\game_loop.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Paddle.cpp" />
+    <ClCompile Include="src\paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Paddle.h" />
+    <ClInclude Include="src\game_data.h" />
+    <ClInclude Include="src\game_loop.h" />
+    <ClInclude Include="src\paddle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -103,7 +106,9 @@
       <Command>copy "$(SolutionDir)lib\sigil-vc2015\glew32.dll" "$(OutDir)" /y
 copy "$(SolutionDir)lib\sigil-vc2015\OpenAL32.dll" "$(OutDir)" /y
 copy "$(SolutionDir)lib\sigil-vc2015\sigil.dll" "$(OutDir)" /y
-copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y</Command>
+copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y
+
+xcopy "$(SolutionDir)res" "$(OutDir)res" /i /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -128,7 +133,9 @@ copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y</Command>
       <Command>copy "$(SolutionDir)lib\sigil-vc2015\glew32.dll" "$(OutDir)" /y
 copy "$(SolutionDir)lib\sigil-vc2015\OpenAL32.dll" "$(OutDir)" /y
 copy "$(SolutionDir)lib\sigil-vc2015\sigil.dll" "$(OutDir)" /y
-copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y</Command>
+copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y
+
+xcopy "$(SolutionDir)res" "$(OutDir)res" /i /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

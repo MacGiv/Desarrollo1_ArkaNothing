@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+Desarrollo1_Arkanot/.vs/
+Desarrollo1_Arkanot/Debug/
+Desarrollo1_Arkanot/Desarrollo1_Arkanot/Debug/
