@@ -1,5 +1,6 @@
 #pragma once
 #include "game_data.h"
+#include "input_utils.h"
 
 struct Paddle
 {

@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="input_utils.cpp" />
     <ClCompile Include="src\game_loop.cpp" />
+    <ClCompile Include="src\input_utils.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="input_utils.h" />
     <ClInclude Include="src\game_data.h" />
     <ClInclude Include="src\game_loop.h" />
+    <ClInclude Include="src\input_utils.h" />
     <ClInclude Include="src\paddle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

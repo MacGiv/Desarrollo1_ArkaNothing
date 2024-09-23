@@ -24,7 +24,7 @@
     <ClCompile Include="src\paddle.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="input_utils.cpp">
+    <ClCompile Include="src\input_utils.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClInclude Include="src\paddle.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="input_utils.h">
+    <ClInclude Include="src\input_utils.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
