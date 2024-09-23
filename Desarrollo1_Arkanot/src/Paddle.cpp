@@ -21,7 +21,17 @@ void initializePlayer(Paddle& playerObj)
 
 void upldatePaddle()
 {
-	// if got input, update paddle pos
+	if (isKeyDown(SL_KEY_SPACE, wasSpacePressed)) {
+		std::cout << "Tecla SPACE presionada!" << std::endl;
+	}
+
+	if (isKeyUp(SL_KEY_SPACE, wasSpacePressed)) {
+		std::cout << "Tecla SPACE soltada!" << std::endl;
+	}
+
+	if (isKeyPressed(SL_KEY_SPACE)) {
+		std::cout << "Tecla SPACE mantenida" << std::endl;
+	}
 }
 
 void getInput(bool& gotInput)
