@@ -1,20 +1,19 @@
 #pragma once
 #include "sl.h"
 
-const int screenWidth = 800;
-const int screenHeight = 450;
+const int screenWidth = 1024;
+const int screenHeight = 768;
 
-const float playerMargin = 20.0f;
-const float playerStartWidth = 25.0f;
-const float playerHeight = 100.0f;
-const int playerOneStartPosX = 0 + playerMargin;
-const int playerStartPosY = screenHeight / 2 - (playerHeight / 2);
-const int playerTwoStartPosX = screenWidth - playerStartWidth - playerMargin;
+const float playerStartWidth = 100.0f;
+const float playerHeight = 25.0f;
+const float playerStartPosX = screenWidth / 2;
+const float playerStartPosY = (screenHeight / 20);
+const float playerStartSpeed = 50.0f;
 
 const int fontSizeSmall = 25;
 const int fontSizeMedium = 35;
 const int fontSizeLarge = 50;
 const int fontSizeXL = 80;
 
-const double timeBeforeClosing = 2;
-const double timeBeforeStart = 1;
+const int paddleHeight = 50;
+const int paddleWidth = 150;

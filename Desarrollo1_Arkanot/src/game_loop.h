@@ -1,4 +1,5 @@
 #pragma once
+#include "paddle.h"
 
 enum class GAME_STATES { NOT_STARTED, PAUSED, RUNNING, GAMEOVER, CREDITS };
 
@@ -8,7 +9,13 @@ struct GameStateMachine
 	GAME_STATES nextState;
 };
 
-GameStateMachine gameState;
 
+void runGame();
 
+void initialize();
 
+void update();
+
+void draw();
+
+void close();
