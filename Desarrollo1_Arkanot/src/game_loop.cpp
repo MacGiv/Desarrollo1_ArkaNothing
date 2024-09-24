@@ -1,9 +1,11 @@
 #include "game_loop.h"
-#include "game_data.h"
+
 
 GameStateMachine gameState;
 
 Paddle player;
+
+Ball ball;
 
 void runGame()
 {
@@ -21,15 +23,19 @@ void runGame()
 
 void initialize()
 {
-    //Set up window 
+    // Set up window 
     slWindow(screenWidth, screenHeight, "ArkaNOT", false);
 
-    initializePlayer(player);
+    initializePaddle(player);
+
+    initializeBall(ball);
 }
 
 void update()
 {
     updatePaddle(player);
+
+    updateBall(ball, player);
 }
 
 void draw()
@@ -37,8 +43,17 @@ void draw()
     // Foreground color
     slSetForeColor(1.0, 1.0, 1.0, 1.0);
 
+    drawPaddle(player);
 
-    slRectangleFill(player.posX, player.posY, player.sizeH, player.sizeV);
+    drawBall(ball);
+
+    //Debug start
+    slSetForeColor(1.0, 0.0, 0.0, 1.0);
+    slCircleFill(player.posX, player.posY, 5.0, 20);
+    slCircleFill(ball.posX, ball.posY, 5.0, 20);
+    slSetForeColor(1.0, 1.0, 1.0, 1.0);
+    //Debug end
+    
 
 
     slRender();

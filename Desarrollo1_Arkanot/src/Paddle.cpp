@@ -1,7 +1,5 @@
 #include "paddle.h"
-
-#include <iostream>
-using namespace std;
+#include "sl.h"
 
 void movePaddleRight(Paddle& playerObj)
 {
@@ -19,7 +17,7 @@ void movePaddleLeft(Paddle& playerObj)
 	}
 }
 
-void initializePlayer(Paddle& playerObj)
+void initializePaddle(Paddle& playerObj)
 {
 	playerObj.posX = playerStartPosX;
 	playerObj.posY = playerStartPosY;
@@ -42,10 +40,11 @@ void updatePaddle(Paddle& playerObj)
 	}
 }
 
-void getInput(bool& gotInput)
+void drawPaddle(Paddle& player)
 {
-	
+	slRectangleFill(player.posX, player.posY, player.sizeH, player.sizeV);
 }
+
 
 void resetPaddlePos()
 {

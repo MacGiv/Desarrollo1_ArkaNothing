@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ball.cpp" />
     <ClCompile Include="src\game_loop.cpp" />
     <ClCompile Include="src\input_utils.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ball.h" />
     <ClInclude Include="src\game_data.h" />
     <ClInclude Include="src\game_loop.h" />
     <ClInclude Include="src\input_utils.h" />

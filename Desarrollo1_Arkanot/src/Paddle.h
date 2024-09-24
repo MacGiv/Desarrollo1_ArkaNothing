@@ -17,10 +17,10 @@ void movePaddleRight(Paddle& playerObj);
 
 void movePaddleLeft(Paddle& playerObj);
 
-void initializePlayer(Paddle& playerObj);
+void initializePaddle(Paddle& playerObj);
 
 void updatePaddle(Paddle& playerObj);
 
-void getInput(bool& gotInput);
+void drawPaddle(Paddle& player);
 
 void resetPaddlePos();

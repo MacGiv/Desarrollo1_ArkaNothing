@@ -1,11 +1,16 @@
 #pragma once
-#include "sl.h"
 
 const int screenWidth = 1024;
 const int screenHeight = 768;
 
-const float playerStartWidth = 100.0f;
-const float playerHeight = 25.0f;
+const float ballStartSpeedX = 500.0f;
+const float ballStartSpeedY = 400.0f;
+const float ballStartRadius = 15.0f;
+const float ballPaddleSafeDistance = 2.0f;
+
+
+const float playerStartWidth = 125.0f;
+const float playerHeight = 35.0f;
 const float playerStartPosX = screenWidth / 2;
 const float playerStartPosY = (screenHeight / 20);
 const float playerStartSpeed = 300.0f;
