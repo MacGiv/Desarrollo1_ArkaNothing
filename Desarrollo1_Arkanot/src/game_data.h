@@ -8,7 +8,7 @@ const float playerStartWidth = 100.0f;
 const float playerHeight = 25.0f;
 const float playerStartPosX = screenWidth / 2;
 const float playerStartPosY = (screenHeight / 20);
-const float playerStartSpeed = 50.0f;
+const float playerStartSpeed = 300.0f;
 
 const int fontSizeSmall = 25;
 const int fontSizeMedium = 35;

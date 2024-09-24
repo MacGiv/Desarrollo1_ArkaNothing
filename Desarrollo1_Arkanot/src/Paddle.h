@@ -12,12 +12,15 @@ struct Paddle
     int score;
 };
 
+
 void movePaddleRight(Paddle& playerObj);
+
+void movePaddleLeft(Paddle& playerObj);
 
 void initializePlayer(Paddle& playerObj);
 
-void upldatePaddle();
+void updatePaddle(Paddle& playerObj);
 
 void getInput(bool& gotInput);
 
-void upldatePaddlePos();
+void resetPaddlePos();

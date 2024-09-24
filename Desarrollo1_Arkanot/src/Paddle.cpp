@@ -1,14 +1,22 @@
 #include "paddle.h"
+
 #include <iostream>
 using namespace std;
 
 void movePaddleRight(Paddle& playerObj)
 {
-	if (playerObj.posX > 0)
+	if (playerObj.posX < screenWidth - playerObj.sizeH / 2)
+	{
+		playerObj.posX += playerObj.speed * slGetDeltaTime();
+	}
+}
+
+void movePaddleLeft(Paddle& playerObj)
+{
+	if (playerObj.posX > 0 + playerObj.sizeH / 2)
 	{
 		playerObj.posX -= playerObj.speed * slGetDeltaTime();
 	}
-
 }
 
 void initializePlayer(Paddle& playerObj)
@@ -21,28 +29,25 @@ void initializePlayer(Paddle& playerObj)
 	playerObj.score = 0;
 }
 
-void upldatePaddle()
+void updatePaddle(Paddle& playerObj)
 {
-	//if (isKeyDown(SL_KEY_SPACE, wasSpacePressed)) {
-	//	std::cout << "Tecla SPACE presionada!" << std::endl;
-	//}
-	//
-	//if (isKeyUp(SL_KEY_SPACE, wasSpacePressed)) {
-	//	std::cout << "Tecla SPACE soltada!" << std::endl;
-	//}
-	//
-	//if (isKeyPressed(SL_KEY_SPACE)) {
-	//	std::cout << "Tecla SPACE mantenida" << std::endl;
-	//}
+	if (isKeyPressed(SL_KEY_RIGHT)) 
+	{
+		movePaddleRight(playerObj);
+	}
+
+	if (isKeyPressed(SL_KEY_LEFT)) 
+	{
+		movePaddleLeft(playerObj);
+	}
 }
 
 void getInput(bool& gotInput)
 {
 	
-
 }
 
-void upldatePaddlePos()
+void resetPaddlePos()
 {
 
 }

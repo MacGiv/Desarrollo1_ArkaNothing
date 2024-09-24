@@ -29,7 +29,7 @@ void initialize()
 
 void update()
 {
-
+    updatePaddle(player);
 }
 
 void draw()
