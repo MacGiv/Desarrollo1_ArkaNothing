@@ -9,6 +9,7 @@ struct Paddle
     float speed;
     float sizeH;
     float sizeV;
+    int lives;
     int score;
 };
 
@@ -19,8 +20,10 @@ void movePaddleLeft(Paddle& playerObj);
 
 void initializePaddle(Paddle& playerObj);
 
-void updatePaddle(Paddle& playerObj);
+void updatePaddle(Paddle& playerObj, GameStateMachine& stateMachine);
 
 void drawPaddle(Paddle& player);
 
-void resetPaddlePos();
+void resetPaddlePos(Paddle& playerObj);
+
+void checkLoseCondition(GameStateMachine& gameState, int playerLives);

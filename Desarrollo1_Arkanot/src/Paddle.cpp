@@ -25,9 +25,10 @@ void initializePaddle(Paddle& playerObj)
 	playerObj.sizeV = playerHeight;
 	playerObj.speed = playerStartSpeed;
 	playerObj.score = 0;
+	playerObj.lives = 3;
 }
 
-void updatePaddle(Paddle& playerObj)
+void updatePaddle(Paddle& playerObj, GameStateMachine& stateMachine)
 {
 	if (isKeyPressed(SL_KEY_RIGHT)) 
 	{
@@ -38,6 +39,17 @@ void updatePaddle(Paddle& playerObj)
 	{
 		movePaddleLeft(playerObj);
 	}
+
+	if (isKeyPressed('P'))
+	{
+		stateMachine.nextState = GAME_STATES::PAUSED;
+	}
+
+	if (isKeyPressed(SL_KEY_ESCAPE))
+	{
+		stateMachine.nextState = GAME_STATES::EXIT;
+	}
+
 }
 
 void drawPaddle(Paddle& player)
@@ -46,7 +58,8 @@ void drawPaddle(Paddle& player)
 }
 
 
-void resetPaddlePos()
+void resetPaddlePos(Paddle& playerObj)
 {
-
+	playerObj.posX = playerStartPosX;
+	playerObj.posY = playerStartPosY;
 }

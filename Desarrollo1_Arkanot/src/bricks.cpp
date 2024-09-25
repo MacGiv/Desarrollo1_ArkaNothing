@@ -45,7 +45,15 @@ void drawBricks(Brick bricks[], int brickCount)
     }
 }
 
-void ballBrickCollisionCheck(Ball& ballObj, Brick& brick) 
+void updateBricks(Ball& ballObj, Brick bricks[], int totalBricks, int& playerScore)
+{
+    for (int i = 0; i < totalBricks; i++)
+    {
+        ballBrickCollisionCheck(ballObj, bricks[i], playerScore);
+    }
+}
+
+void ballBrickCollisionCheck(Ball& ballObj, Brick& brick, int& playerScore)
 {
     if (!brick.isDestroyed) 
     {
@@ -87,14 +95,9 @@ void ballBrickCollisionCheck(Ball& ballObj, Brick& brick)
             {
                 ballObj.speedY *= -1;
             }
+
+            playerScore++;
         }
     }
 }
 
-void updateBricks(Ball& ballObj, Brick bricks[], int totalBricks)
-{
-    for (int i = 0; i < totalBricks; i++)
-    {
-        ballBrickCollisionCheck(ballObj, bricks[i]);
-    }
-}

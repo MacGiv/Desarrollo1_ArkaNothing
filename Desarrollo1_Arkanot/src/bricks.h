@@ -17,6 +17,6 @@ void initializeBricks(Brick bricks[], int totalBricks);
 
 void drawBricks(Brick bricks[], int totalBricks);
 
-void ballBrickCollisionCheck(Ball& ballObj, Brick& brick);
+void ballBrickCollisionCheck(Ball& ballObj, Brick& brick, int& playerScore);
 
-void updateBricks(Ball& ballObj, Brick bricks[], int totalBricks);
+void updateBricks(Ball& ballObj, Brick bricks[], int totalBricks, int& playerScore);

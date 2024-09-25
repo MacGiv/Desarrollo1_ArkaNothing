@@ -3,14 +3,9 @@
 #include "ball.h"
 #include "paddle.h"
 #include "bricks.h"
-
-enum class GAME_STATES { NOT_STARTED, PAUSED, RUNNING, GAMEOVER, CREDITS };
-
-struct GameStateMachine
-{
-	GAME_STATES currentState;
-	GAME_STATES nextState;
-};
+#include "main_menu.h"
+#include "pause_menu.h"
+#include "game_ui.h"
 
 
 void runGame();
