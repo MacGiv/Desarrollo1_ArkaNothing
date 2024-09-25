@@ -113,11 +113,6 @@ void ballPaddleCollisionCheck(Ball& ballObj, Paddle player)
             {
                 ballObj.posY = paddleTop + ballObj.radius + ballPaddleSafeDistance;
             }
-            // Bottom collision
-            //else if (ballObj.speedY < 0) 
-            //{
-            //    ballObj.posY = paddleBottom - ballObj.radius - ballPaddleSafeDistance;
-            //}
         }
     }
 }

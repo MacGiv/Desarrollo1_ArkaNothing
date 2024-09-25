@@ -15,25 +15,18 @@ Brick createBrick(int posX, int posY, float width, float height)
 
 void initializeBricks(Brick bricks[], int totalBricks)
 {
-    // Valores fijos para los ladrillos
-    float brickWidth = 60.0f;
-    float brickHeight = 30.0f;
-    float startX = 50.0f;  // Posición de inicio en X
-    float startY = screenHeight - (screenHeight * 0.10f);
-    float horizontalSpacing = 10.0f;
-    float verticalSpacing = 10.0f;
-
-    // Calculamos la cantidad de columnas en función del ancho de la pantalla y los ladrillos
-    int cols = (screenWidth - startX * 2) / (brickWidth + horizontalSpacing);
-    int rows = (totalBricks + cols - 1) / cols;  // Calculamos las filas necesarias
+    // Calculate amount of cols depending on screen width
+    int cols = (screenWidth - brickStartPosX * 2) / (brickWidth + brickHorizontalSpacing);
+    // Calculate rows
+    int rows = (totalBricks + cols - 1) / cols;  
 
     int index = 0;
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j <= cols && index < totalBricks; j++)
         {
-            float posX = startX + j * (brickWidth + horizontalSpacing);
-            float posY = startY - i * (brickHeight + verticalSpacing);
+            float posX = brickStartPosX + j * (brickWidth + brickHorizontalSpacing);
+            float posY = brickStartPosY - i * (brickHeight + brickVerticalSpacing);
 
             bricks[index] = createBrick(posX, posY, brickWidth, brickHeight);
             index++;
@@ -85,7 +78,7 @@ void ballBrickCollisionCheck(Ball& ballObj, Brick& brick)
             bool collisionVertical = overlapTop < overlapBottom && overlapTop < overlapLeft && overlapTop < overlapRight ||
                 overlapBottom < overlapTop && overlapBottom < overlapLeft && overlapBottom < overlapRight;
 
-            // Ajustar dirección de la pelota según el lado de la colisión
+            // Change ball direction depending on colliison type
             if (collisionHorizontal) 
             {
                 ballObj.speedX *= -1;
