@@ -63,3 +63,11 @@ void resetPaddlePos(Paddle& playerObj)
 	playerObj.posX = playerStartPosX;
 	playerObj.posY = playerStartPosY;
 }
+
+void checkLoseCondition(GameStateMachine& gameState, int playerLives)
+{
+	if (playerLives <= 0)
+	{
+		gameState.nextState = GAME_STATES::GAMEOVER;
+	}
+}
