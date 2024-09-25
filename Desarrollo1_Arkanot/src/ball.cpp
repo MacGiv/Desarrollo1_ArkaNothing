@@ -27,7 +27,7 @@ void drawBall(Ball& ballObj)
 
 void checkBallCollisionWithWalls(Ball& ballObj)
 {
-    // Left and right wall collission
+    // Left and right wall collision
     if (ballObj.posX - ballObj.radius <= 0 || ballObj.posX + ballObj.radius >= screenWidth)
     {
         ballObj.speedX *= -1;

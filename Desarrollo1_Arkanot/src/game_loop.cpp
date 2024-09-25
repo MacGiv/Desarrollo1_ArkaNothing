@@ -1,11 +1,12 @@
 #include "game_loop.h"
 
-
 GameStateMachine gameState;
 
 Paddle player;
 
 Ball ball;
+
+Brick bricks[bricksAmount];
 
 void runGame()
 {
@@ -23,12 +24,16 @@ void runGame()
 
 void initialize()
 {
+
     // Set up window 
     slWindow(screenWidth, screenHeight, "ArkaNOT", false);
 
     initializePaddle(player);
 
     initializeBall(ball);
+
+    initializeBricks(bricks, bricksAmount);
+
 }
 
 void update()
@@ -36,6 +41,8 @@ void update()
     updatePaddle(player);
 
     updateBall(ball, player);
+
+    updateBricks(ball, bricks, bricksAmount);
 }
 
 void draw()
@@ -47,10 +54,13 @@ void draw()
 
     drawBall(ball);
 
+    drawBricks(bricks, bricksAmount);
+
     //Debug start
     slSetForeColor(1.0, 0.0, 0.0, 1.0);
     slCircleFill(player.posX, player.posY, 5.0, 20);
     slCircleFill(ball.posX, ball.posY, 5.0, 20);
+    slCircleFill(0, 0, 50.0, 10);
     slSetForeColor(1.0, 1.0, 1.0, 1.0);
     //Debug end
     

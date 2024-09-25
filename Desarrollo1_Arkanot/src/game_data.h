@@ -2,12 +2,16 @@
 
 const int screenWidth = 1024;
 const int screenHeight = 768;
+const int topMargin = 15.0f;
 
 const float ballStartSpeedX = 500.0f;
 const float ballStartSpeedY = 400.0f;
 const float ballStartRadius = 15.0f;
 const float ballPaddleSafeDistance = 2.0f;
 
+//const float brickWidth = 30.0f;
+const int bricksAmount = 70;
+//const float brickSpacingAmount = 3.0f;
 
 const float playerStartWidth = 125.0f;
 const float playerHeight = 35.0f;
@@ -22,3 +26,4 @@ const int fontSizeXL = 80;
 
 const int paddleHeight = 50;
 const int paddleWidth = 150;
+

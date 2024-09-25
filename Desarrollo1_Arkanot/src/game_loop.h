@@ -2,6 +2,7 @@
 #include "game_data.h"
 #include "ball.h"
 #include "paddle.h"
+#include "bricks.h"
 
 enum class GAME_STATES { NOT_STARTED, PAUSED, RUNNING, GAMEOVER, CREDITS };
 
