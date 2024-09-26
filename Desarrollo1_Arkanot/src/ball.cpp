@@ -11,6 +11,11 @@ void initializeBall(Ball& ballObj)
     ballObj.posY = playerStartPosY + paddleHeight + ballObj.radius;
 }
 
+void resetBall(Ball& ballObj)
+{
+
+}
+
 void updateBall(Ball& ballObj, Paddle& playerObj)
 {
     ballObj.posX += ballObj.speedX * slGetDeltaTime();
@@ -25,7 +30,7 @@ void drawBall(Ball& ballObj)
     slCircleFill(ballObj.posX, ballObj.posY, ballObj.radius, 20.0);
 }
 
-void checkBallCollisionWithWalls(Ball& ballObj)
+void checkBallCollisionWithWalls(Ball& ballObj, Paddle& player, bool& reset)
 {
     // Left and right wall collision
     if (ballObj.posX - ballObj.radius <= 0 || ballObj.posX + ballObj.radius >= screenWidth)
@@ -53,8 +58,8 @@ void checkBallCollisionWithWalls(Ball& ballObj)
     // Bottom collision
     if (ballObj.posY - ballObj.radius <= 0)
     {
-        ballObj.speedY *= -1;
-        ballObj.posY = 0 + ballObj.radius;
+        player.lives--;
+        reset = true;
     }
 }
 

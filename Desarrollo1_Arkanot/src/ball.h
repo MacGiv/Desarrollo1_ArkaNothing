@@ -17,7 +17,9 @@ void updateBall(Ball& ballObj, Paddle& playerObj);
 
 void drawBall(Ball& ballObj);
 
-void checkBallCollisionWithWalls(Ball& ballObj);
+void checkBallCollisionWithWalls(Ball& ballObj, Paddle& player, bool& reset);
 
 void ballPaddleCollisionCheck(Ball& ballObj, Paddle player);
+
+void resetBall(Ball& ballObj);
 

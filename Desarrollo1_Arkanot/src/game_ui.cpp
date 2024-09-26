@@ -1,4 +1,5 @@
 #include "game_ui.h"
+#include "sl.h"
 #include <string>
 using namespace std;
 
@@ -73,4 +74,9 @@ void drawGameOver()
 	slSetForeColor(1.0, 1.0, 1.0, 1.0);
 	slText(msgPosX, msgPosY, "Game Over!");
 	slText(msgPosX, msg2PosY, "Thank you for playing!");
+}
+
+void updateGameOver()
+{
+	
 }
